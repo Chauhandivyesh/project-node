@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{> headerLinks }}
+	<title>Document</title>
+</head>
+<body>
+	
+	<!--PreLoader-->
+    {{> loader }}
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	{{> header}}
+	<!-- end header -->
+
+		<!-- search area -->
+		{{> search}}
+		<!-- end search arewa -->
+		
+		<!-- error section -->
+		<div class="full-height-section error-section">
+			<div class="full-height-tablecell">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 offset-lg-2 text-center">
+							<div class="error-text">
+								<i class="far fa-sad-cry"></i>
+								<h1>Oops! Not Found.</h1>
+								<p>The page you requested for is not found.</p>
+								<a href="index" class="boxed-btn">Back to Home</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end error section -->
+		
+		<!-- logo carousel -->
+		{{> logo}}
+		<!-- end logo carousel -->
+		
+		<!-- footer -->
+		{{> footer}}
+	<!-- end footer -->
+	
+	<!-- copyright -->
+	{{> copyright}}
+	<!-- end copyright -->
+	
+	{{!-- footerLink start --}}
+	{{> footerLinks }}	
+	{{!-- footerLink end --}}
+	
+	</body>
+</html>

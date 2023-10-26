@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+  {{> headerLinks }}
+  <link rel="stylesheet" type="text/css" href="/css/login.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="mt-5">
+  <div class="container-xxl bg-white p-5 ">
+    {{> header CustomHeader='custHeader' }}
+
+    <!-- Login Start -->
+    <div class="wrapper">
+      <div class="title-text mt-6">
+        <div class="title login">
+          Login Form
+        </div>
+        <div class="title signup">
+          Signup Form
+        </div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          {{!-- login form start --}}
+          <form class="login" method="post" id="loginForm">
+            <div class="field">
+              {{!-- email field --}}
+              <input type="text" name="uEmail" id="uEmail" placeholder="Email Address" required />
+            </div>
+            {{!-- password field --}}
+            <div class="field">
+              <input type="password" name="uPassword" id="uPassword" placeholder="Password" required />
+            </div>
+            <div class="pass-link">
+              <a href="">Forgot password?</a>
+            </div>
+            <div class="field btn">
+            {{!-- login submit button --}}
+              <div class="btn-layer"></div>
+              <input type="submit" id="loginBtn" value="Login" />
+            </div>
+            <div class="signup-link">
+              Not a member?
+              <a href="">Signup now</a>
+            </div>
+          </form>
+          {{!-- register form --}}
+          <form class="signup" action="register" method="post">
+            <div class="field">
+              {{!-- user name field --}}
+              <input type="text" name="uName" placeholder="User Name" required />
+            </div>
+            {{!-- user email field --}}
+            <div class="field">
+              <input type="text" name="uEmail" placeholder="Email Address" required />
+            </div>
+            {{!-- password field --}}
+            <div class="field">
+              <input type="password" name="uPassword" placeholder="Password" required />
+            </div>
+            {{!-- conform password field --}}
+            <div class="field">
+              <input type="password" placeholder="Confirm password" name="cPassword" required />
+            </div>
+            {{!-- signup button --}}
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Signup" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Login End -->
+    {{> footer }}
+  </div>
+  
+  </div>
+  {{> footerLinks }}
+  <script defer src="/js/style.js"></script>
+  <script defer src="/js/storage.js"></script>
+ </body>
+
+</html>

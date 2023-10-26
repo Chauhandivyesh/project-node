@@ -1,0 +1,68 @@
+{{! header start }}
+<div class="top-header-area {{CustomHeader}}" id="sticker">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 text-center">
+        <div class="main-menu-wrap">
+          <!-- logo -->
+          <div class="site-logo">
+            <a href="index">
+              <img src="/img/logo.png" alt="" />
+            </a>
+          </div>
+          <!-- logo -->
+
+          <!-- menu start -->
+          <nav class="main-menu">
+            <ul>
+              <li class="current-list-item"><a href="index">Home</a>
+              </li>
+              <li><a href="about">About</a></li>
+              <li><a href="news">News</a>
+                <ul class="sub-menu">
+                  <li><a href="single-news">Single News</a></li>
+                </ul>
+              </li>
+              <li><a href="contact">Contact</a></li>
+              <li><a href="shop">Shop</a>
+                <ul class="sub-menu">
+                  <li><a href="checkout">Check Out</a></li>
+                  <li><a href="single-product">Single Product</a></li>
+                  <li><a href="cart">Cart</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="header-icons">
+                  {{!-- json userLoggedIn is use to check the condition --}}
+                  {{!-- test {{json userLoggedIn }} --}}
+
+                  <a class="user" href="{{#if userLoggedIn}}{{else}}login{{/if}}">    
+                      
+                    {{#if userLoggedIn}}
+                    {{userName}}
+                  
+                    <a href="#" class="logout"><i class='fas fa-user-circle'></i></a>
+                    <a class="shopping-cart" href="cart"><i class="fas fa-shopping-cart position-absolute d-flex justify-content-center align-items-center"></i></a>
+                    <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                    
+                    <ul class="sub-menu" style="padding-bottom: 0px;">
+                      <li><a href="editpage">Edit Page</a></li>
+                      <li><a href="#" onclick="btnclick()" id="logoutButton">Logout<a></li>
+                    </ul>
+                    
+                    {{else}}
+                    <i class="fas fa-user"></i>
+                    {{/if}}
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+          <div class="mobile-menu"></div>
+          <!-- menu end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
